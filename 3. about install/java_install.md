@@ -1,0 +1,61 @@
+## java 설치 방법
+	1. www.oracle.com 접속
+	2. Developers - download - java - Java(JDK) for Developers - Java SE 8u181 JDK - windows x64
+		* JRE는 소스코드 사용만 할 때 사용
+		* 안드로이드는 Java 9,10버전은 사용하지 않는다.
+		* 9버전부터는 orlcle 인수합병 영향으로 변화가 큼.
+		* standard, enterprise 2가지 adtion 이 있다. 안드로이드는 standard를 사용한다.
+	3. 설치 프로그램 쭉쭉쭉 next하면 설치 완료
+		* cmd - java 입력해서 설치여부 확인
+		* C:\Program Files\Java\jdk1.8.0_181 에 설치됨
+	4. 윈도우 - 컴퓨터 - 속성 - 고급 시스템 설정 - 환경 변수 - 시스템 변수 "새로 만들기" 
+	5. 변수이름 설정
+		* 변수이름: JAVA_HOME
+		* 변수 값:  Java jdk가 설치되있는 경로 (C:\Program Files\Java\jdk1.8.0_181)
+	6. 시스템 변수에서 "Path"라는 변수를 찾아라
+		* 이거 지우면 절대 안된다. 절대 지우지말고, 맨 앞에 다음 문장 추가
+		* %JAVA_HOME%\bin;
+		* cmd에서 javac 입력해서 설치 여부 확인
+
+<hr>
+
+## 개발환경 다운로드 (이클립스)
+	1. http://www.eclipse.org 접속
+	2. 다운로드 클릭
+	3. Get Eclipse PHOTON 하단의 Download Packages
+	4. Eclipse IDE for Java Developers 에서 windows 64bits 클릭 - download
+	5. 설치된 압축 파일을 압축해제 한 뒤, 그 안에 있는 eclipse 폴더를 실습중인 Java 파일이 있는 폴더로 옮긴다.
+		* ex. javaStudy 폴더
+		* 압축한 workSpace는 수업 실습 내용이 있는 파일
+	6. eclipse 폴더 안의 eclipse.exe 실행
+	7. workspace 폴더 위치를 설정하라는 말이 나올 것임. 실습 내용을 저장할 폴더를 설정하는게 좋을 것.
+
+<hr>
+
+## Eclipse Jee Photon (Enterprise version. Server 작업을 할 수 있는 Oracle)
+	1. 첨부한 apache-tomcat-8.5.33 알집 파일은 C드라이브 안에 압축 해제한다.
+	2. 첨부한 eclipse-inst-win64는 그냥 실행한다.
+	3. eclipse-inst-win64 실행 후 나타나는 화면에서 2번째, Eclipse IDE for Java EE Developers를 클릭한다.
+	4. 나오는거마다 accept해준다.
+
+</hr>
+
+## 서버 환경 셋팅
+	1. Servers tap 클릭. new server -> apach -> Tomcat v8.5 Server 선택
+	2. Tomcat installation directory: 를 apache-tomcat-8.5.33 폴더 선택하고 finish.
+	3. 그럼 이제 Server tap에 항목이 하나 생긴다. 클릭 후, 재생 버튼 클릭하면 서버 옆에 싱크로나이즈 완료도미이 표시된다.
+	4. 만약, 다른 서버 시스템과 동일한 port번호를 사용하는 경우, 항목을 더블클릭해서 HTTP Prot번호를 수정해준다.
+	5. 상단의 File-new-Dynamic Web Project 클릭.
+	6. 새로 만들어진 프로젝트의 Java Resources가 Java sources를 저장, WebContent가 Java 외 source를 저장한다.
+	7. -- 실습시간에는 WebContent에 JSP라는 새로운 폴더를 만들고, 그안에 .jsp파일을 만들어서, 데이터베이스 구조로 저장한다.
+	8. 실행하면, 방금 만든 jsp내용을 출력하면서, 서버 주소가 출력된다. 이를 복사해서 사용하면 된다.
+	9. 이 때, localhost의 경우, 코딩하는 컴퓨터와 이를 수행하는 모바일이 다르므로, <br>
+	   cmd-ipconfig를 통해 IP주소를 localhost 대신에 넣어서 사용한다.
+
+<hr>
+
+#### Oracle 설치 환경은 다른 곳에 저장되어 있다.
+	1. mulcam_App_develop/documentation_android_study/180821 Thread 메소드 요약 설명, oracle설치방법, db 명령어.md <- 여기에 설치방법
+	2. mulcam_App_develop/mulcam_android_code/oracle 설치환경/ <- 여기에 custdata.sql 저장되어 있다.
+
+<hr>
