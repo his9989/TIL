@@ -12,6 +12,14 @@ int main() {
 	for (int i = 0; i < n; i++) count[i] = 0;
 
 	// 2차 동적 배열
+	// n행 4열
+/*
+	a a a a
+	b b b b
+	...
+	z z z z
+*/	
+	
 	int ** arr = new int*[n];
 	for (int i = 0; i<n; i++) {
 		arr[i] = new int[4];
