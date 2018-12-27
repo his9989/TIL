@@ -1,6 +1,6 @@
 ### cstdio 사용 안하는 방법
 
-#### int를 convert
+#### 1. int를 convert
 
 * int to char
   + 연산 사용
@@ -12,7 +12,7 @@
 	
 	</code>
 
-#### char를 convert
+#### 2. char를 convert
 
 * char to int
   + 연산 사용
@@ -23,15 +23,29 @@
 		int num = cnum-0;
 		
 	</code>
-	
 
-#### string을 convert
+* char to string
+  + 강제 형변환
+  	<code>
+	
+		string input;
+		cin >> input;
+		char * temp;
+		temp = (char *)input.c_str();
+		
+	<code>
+	
+	- input : hello 일 때, 출력결과
+	- cout << temp << ", " << input << "\n"; 	-> hello, hello
+	- cout << temp[0] << ", " << temp[1];		-> h, e
+
+#### 3. string을 convert
 
 ---
 
 ### cstdio 사용하는 방법
 	
-#### int를 convert
+#### 1. int를 convert
 
 * int to string
   + stream 사용
@@ -46,9 +60,9 @@
 	
 	</code>
 	
-#### char를 convert
+#### 2. char를 convert
 
-#### string을 convert
+#### 3. string을 convert
 
 * string to int, float, double
 
