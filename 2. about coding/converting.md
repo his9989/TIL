@@ -1,14 +1,49 @@
-### cstdio 사용 안하는 방법
+### 자료형 변환
+* 주로 사용하는 헤더
+  + #include<iostream>
+  + #include<sstream>
+  + #include<string>
+  + #include<cstdio>
 
 #### 1. int를 convert
 
 * int to char
-  + 연산 사용
+  + 연산 사용 (문자 내용을 그대로 int형으로 변환)
 	<code>
 	
 		int i=6;
 		char c;
 		c = '0'+i;
+	
+	</code>
+	
+  + 아스키코드로 변환
+  	<code>
+		
+		int j=65;
+		char a = j;
+		// a = A
+		
+	</code>
+
+  + 알파벳 26개
+  	- 48->0
+	- 57->9
+   	- 65->A
+	- 90->Z
+	- 97->a
+	- 122->z
+
+* int to string
+  + stream 사용 (#include<sstream>)
+  	<code>
+	
+		int num = 0;
+		cin >> num;
+		ostringstream ostr;
+		ostr << num;
+		string numTostr = ostr.str();
+		int len = numTostr.length();
 	
 	</code>
 
@@ -24,6 +59,33 @@
 		
 	</code>
 
+  + atoi() 사용
+  	<code>
+	
+		char a[] = "1234";
+		// a[0] = 1, a[1] = 2, a[2] = 3, a[3] = 4
+		int i = atoi(a);
+		// i = 1234
+	
+	</code>
+	
+  + 아스키코드로 변환
+  	<code>
+		
+		char a = '0';
+		int j=a;
+		// j = 48
+		
+	</code>
+
+  + 알파벳 26개
+  	- 0->48
+	- 9->57
+   	- A->65
+	- Z->90
+	- a->97
+	- z->122
+	
 * char to string
   + 강제 형변환
   	<code>
@@ -41,31 +103,8 @@
 
 #### 3. string을 convert
 
----
-
-### cstdio 사용하는 방법
-	
-#### 1. int를 convert
-
-* int to string
-  + stream 사용
-  	<code>
-	
-		int num = 0;
-		cin >> num;
-		std::ostringstream ostr;
-		ostr << num;
-		std::string numTostr = ostr.str();
-		int len = numTostr.length();
-	
-	</code>
-	
-#### 2. char를 convert
-
-#### 3. string을 convert
-
 * string to int, float, double
-
+  + cstdio 사용 (#include<cstio>), (stoi, stof, stod)
 	<code>
 	
 		string str = "64";
@@ -80,6 +119,10 @@
 		printf("%d %.2f %.2f", i, f, d);
 
 	</code>
+
+---
+
+[보류]
 	
 * int to int_array
 
