@@ -87,6 +87,7 @@
 	- z->122
 	
 * char to string
+
   + 강제 형변환
   	<code>
 	
@@ -101,7 +102,26 @@
 	- cout << temp << ", " << input << "\n"; 	-> hello, hello
 	- cout << temp[0] << ", " << temp[1];		-> h, e
 
-#### 3. string을 convert
+  + char[] to string
+      	<code>
+	
+		char ch[] = "hello nice to meet you";
+		
+		// way 1. output : hello
+		string str(ch, ch+5);
+		
+		// way 2. output : ello
+		string str(ch+1, ch+5);
+		
+		// way 3. output : hello nice to meet you
+		string str(ch, size(ch));
+	
+		// way 4. output : hello nice to meet you
+		string str(begin(ch), end(ch));
+		
+	</code>
+
+#### 3. string를 convert
 
 * string to int, float, double
   + cstdio 사용 (#include<cstio>), (stoi, stof, stod)
