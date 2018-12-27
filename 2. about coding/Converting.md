@@ -157,3 +157,12 @@
 	- input : hello 일 때, 출력결과
 	- cout << temp << ", " << input << "\n"; 	-> hello, hello
 	- cout << temp[0] << ", " << temp[1];		-> h, e
+
+  + 문자열의 특정 위치를 문자형으로 변환
+  	<code>
+	
+		string s = "ABCDEF";
+		char c = s.at(3);
+		// c = 'D';
+		
+	</code>
