@@ -47,6 +47,15 @@
 	
 	</code>
 
+  + to_string 사용
+  	<code>
+	
+		int i = 65;
+		string str = to_string(i);
+		// str = 65;
+	
+	</code>
+	
 #### 2. char를 convert
 
 * char to int
@@ -85,22 +94,6 @@
 	- Z->90
 	- a->97
 	- z->122
-	
-* char to string
-
-  + 강제 형변환
-  	<code>
-	
-		string input;
-		cin >> input;
-		char * temp;
-		temp = (char *)input.c_str();
-		
-	<code>
-	
-	- input : hello 일 때, 출력결과
-	- cout << temp << ", " << input << "\n"; 	-> hello, hello
-	- cout << temp[0] << ", " << temp[1];		-> h, e
 
   + char[] to string
       	<code>
@@ -140,20 +133,27 @@
 
 	</code>
 
----
-
-[보류]
+* string to int
+  + atoi 사용
+  	<code>
 	
-* int to int_array
-
-* int_array to int
-
-* char to string
+		string str = "3456";
+		int i = atoi(str.c_str());
+		// i = 3456
+	
+	</code>
 
 * string to char
-
-* string to char_array
-
-* char to char_array
-
-* char_array to char
+  + 강제 형변환
+  	<code>
+	
+		string input;
+		cin >> input;
+		char * temp;
+		temp = (char *)input.c_str();
+		
+	<code>
+	
+	- input : hello 일 때, 출력결과
+	- cout << temp << ", " << input << "\n"; 	-> hello, hello
+	- cout << temp[0] << ", " << temp[1];		-> h, e
