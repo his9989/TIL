@@ -4,6 +4,9 @@
 * tar -xvf file_name.tar.gz
   + 압축되어있는 파일을 압축해제합니다.
   
+* mkdir directory_name
+  + 디렉토리를 생성합니다.
+  
 * cd directory_name
   + 디렉토리에 들어갑니다.
   
@@ -13,12 +16,29 @@
 * cd ./directory_name
   + 현재 디렉토리에서 한 번 뒤로 이동한 뒤, 거기에서 명령어에 입력한 디렉토리에 들어갑니다.
   
+* cd /directory_name
+  + 루트 디렉토리 안에 있는 디렉토리 중에 검색한 디렉토리에 들어갑니다.
+  
 * cd
   + 가장 첫 디렉토리로 이동합니다.
   
 * rm file_name
   + file을 remove합니다.
-  
+
+*  cp 
+
+* ls
+  + 현재 디렉토리에 있는 모든 디렉토리와 파일을 보여줍니다.
+
+* ls - l directory_name
+  + directory_name에 있는 디렉토리와 파일을 보여줍니다.
+
+* cp file_name file_name2
+  + file_name을 file_name2로 복사합니다.
+
+* cp *.cpp directory_name
+  + .cpp 파일 형식을 directory_name에 모두 복사한다.
+
 * vi file_name
   + file 편집화면에 들어갑니다.
   
