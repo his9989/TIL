@@ -25,7 +25,8 @@
 * rm file_name
   + file을 remove합니다.
 
-*  cp 
+* rm -rf directory_name
+  + directory를 remove 합니다.
 
 * ls
   + 현재 디렉토리에 있는 모든 디렉토리와 파일을 보여줍니다.
