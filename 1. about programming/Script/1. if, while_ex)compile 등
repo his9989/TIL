@@ -1,0 +1,114 @@
+### if문
+* if문 구조
+  + if로 시작, fi로 닫는다
+  + 각 특수기호는 띄워주고, ;만 붙인다.
+  + -f 는 파일인지 확인하는 기호. 밑에서 모아서 다룰 예정.
+
+<code>
+
+    // 형식 1.
+    if [ -f ./a.c ]; then
+        echo "compile a.c"
+        gcc -o a a.c
+        a
+    else
+        echo "a.c is not exist"
+    fi
+    
+</code>
+
+<code>
+
+    // 형식 2.
+    if test -f ./a.c
+    then
+    echo "compile a.c"
+    gcc -o a a.c
+    a
+    else
+    echo "a.c is not exist"
+    fi
+    
+</code>
+
+### while문
+* 무한반복
+<code>
+
+    while true; do
+        echo "hi"
+    done
+    
+</code>
+
+<code>
+
+    while :; do
+        echo "hello"
+    done
+    
+</code>
+
+* 원하는 갯수 만큼 반복
+<code>
+
+    i=0
+    while [ "$i" -lt 10 ]; do
+        echo "hi"
+        i=$(expr $i + 1)
+    done
+
+### 변수 다루기
+* 스크립트에서는 $를 이용해서 변수를 인식한다.
+  + str="hello"
+    - str = "hello"는 에러다. 띄어쓰기 하면 안된다.
+  + echo "string is null"
+    - output : string is null
+  + echo "$string is null"
+    - output : hello is null
+
+* 변수는 기본적으로 문자로 인식된다. 따라서, 비교 등으로 사용 가능하고, 바로 연산은 불가하다.
+  + -eq는 비교 연산. 밑에서 따로 다룰 예정이다.
+  + 변수 x=1은 분명 문자로서 1을 저장한게 맞지만, -eq의 비교구문에서는 이를 숫자로 변환해서 인식하는 것 뿐이다.
+  + 즉, 반복 구문에서도 x는 여전히 문자이기 때문에, expr과정이 필요하다.
+<code>
+
+    x=1
+    if [ $x -eq 1 ]; then
+      echo "x=1"
+    else
+      echo "x!=1"
+    fi
+    
+</code>
+
+  + 변수 연산
+<code>
+
+    i=0
+    while [ "$i" -lt 10 ]; do
+        echo "hi"
+        i=$(expr $i + 1)
+    done
+    
+ <code>
+ 
+### 비교, 및 조건 연산 정리
+* -f  : 일반적인 파일인가?
+* -e  : 존재하는 파일인가?
+* -d  : 디렉토리인가?
+* -x  : 실행권한이 있는지?
+  + 없다면, chmod -x file_name.rc 를 이용해서 권한 추가 가능.
+* -w  : 쓰기권한이 있는지?
+* -r  : 읽기권한이 있는지?
+  + -x, -w, -r은 리눅스 명령어 ls -al를 이용해서 직접 확인 가능하다.
+* -g  : 파일에 sgid 권한이 있는지?
+* -u  : 파일에 ugid 권한이 있는지?
+* -eq : 두 숫자가 같은지?
+* -ne : 두 숫자가 다른지?
+* -gt : 앞의 숫자가 큰지?
+* -lt : 앞의 숫자가 작은지?
+* =   : 두 문자열이 같은가?
+* !=  : 두 문자열이 다른가?
+* -z  : 문자열이 비어있는지?
+* -n  : 문자열이 비어있지 않은지?
