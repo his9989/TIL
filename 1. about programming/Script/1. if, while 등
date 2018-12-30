@@ -1,0 +1,8 @@
+* 스크립트에서는 $를 이용해서 변수를 인식한다.
+  + str="hello"
+    - str = "hello"는 에러다. 띄어쓰기 하면 안된다.
+  + echo "string is null"
+    - output : string is null
+  + echo "$string is null"
+    - output : hello is null
+
