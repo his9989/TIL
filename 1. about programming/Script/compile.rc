@@ -1,0 +1,105 @@
+#!/bin/bash
+
+echo "start"
+
+if [ -f ./a.c ]; then
+	echo "compile a.c"
+	gcc -o c a.c
+else
+	echo "a.c is not exist"
+fi
+
+if [ -e ./b.c ]; then
+	echo "compile b.c"
+	gcc -o a b.c
+else
+	echo "b.c is not exist"
+fi
+
+if test -f ./c.c
+then
+echo "compile c.c"
+gcc -o b c.c
+else
+echo "c.c is not exist"
+fi
+
+if test -f ./d.c
+then "compile d.c"
+gcc -o d.c
+else
+echo "d.c is noe exist"
+fi
+
+if [ -d ./backup ]; then
+	echo "exist backup directory"
+else
+	echo "not exist backup directory"
+fi
+
+x=1
+if [ $x -eq 1 ]; then
+	echo "x=1"
+fi
+
+if [ "$x" -eq "1" ]; then
+	echo "x=1"
+fi
+
+if [ $x -ne 2 ]; then
+	echo "x != 2"
+fi
+
+if [ $x -gt 0 ]; then
+	echo "x > 0"
+fi
+
+if [ $x -lt 2 ]; then
+	echo "x < 2"
+fi
+
+str="hello"
+
+if [ "$str" = "hello" ]; then
+	echo "str = hello"
+fi
+
+if [ "$str" != "hi" ]; then
+	echo "str != hi"
+fi
+
+if [ -z "$string" ]; then
+	echo "string is not declared"
+	echo "$string is not declared"
+fi
+
+if [ -n "$str" ]; then
+	echo "str is declared"
+	echo "$str is declared"
+fi
+
+temp="hahahahaha"
+echo "This is temp"
+echo "This is $temp"
+
+a
+echo ""
+b
+echo ""
+c
+echo ""
+
+while true; do
+	echo "hi"
+done
+
+while :; do
+	echo "hi"
+done
+
+i=0
+while [ "$i" -lt 10 ]; do
+	echo "hi"
+	i=$(expr $i + 1)
+done
+
