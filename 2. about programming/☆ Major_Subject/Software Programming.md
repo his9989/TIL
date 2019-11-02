@@ -22,3 +22,10 @@
   + PaaS : 소스코드만 적어서 빌드하는 것
   + IaaS : OS를 직접 올리고 그 위에 구축. ex) AWS의 EC2
   + 내가 진행한 건 모두 SaaS
+
+* 고객 분석 다이어그램 종류
+  + Use case diagram, sequence diagram, class diagram
+  
+* 동적할당 언어별 방법
+  + C : malloc() / free()
+  + C++ : new / delete
