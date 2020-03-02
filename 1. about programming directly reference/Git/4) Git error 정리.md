@@ -30,3 +30,8 @@
     git config --global core.autocrlf true
   
 </code>
+
+* error message : Please make sure you have the correct access rights and the repository exists.
+   + 원인 : 지정한 remote 경로는 ssh형식인데, git 생성을 https형식으로 경로를 설정했으므로 문제 발생
+   + 해결 방법 : git remote rm origin을 통해 기존 remote 경로를 지우고 https형식으로 다시 설정하여 해결
+   + reference url : https://recoveryman.tistory.com/282
