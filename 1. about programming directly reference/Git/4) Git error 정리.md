@@ -35,3 +35,8 @@
    + 원인 : 지정한 remote 경로는 ssh형식인데, git 생성을 https형식으로 경로를 설정했으므로 문제 발생
    + 해결 방법 : git remote rm origin을 통해 기존 remote 경로를 지우고 https형식으로 다시 설정하여 해결
    + reference url : https://recoveryman.tistory.com/282
+   
+* error message : You have not concluded your merge (MERGE_HEAD exists)
+  + 원인 : 병합 중 충돌
+  + 해결 방법 : git merge --abort 하고 다시 pull 한 다음에 git push
+  + ref url : https://gutmate.github.io/2018/04/18/git-pull-fail/
