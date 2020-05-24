@@ -40,3 +40,9 @@
   + 원인 : 병합 중 충돌
   + 해결 방법 : git merge --abort 하고 다시 pull 한 다음에 git push
   + ref url : https://gutmate.github.io/2018/04/18/git-pull-fail/
+  
+* 문제상황 : master branch에서 작업한 줄 알고, 작업 중이던 test branch를 지워버림. 다행히 커밋하고 branch 지워서 커밋 내용은 남음
+  + 1. git reflog : git clone부터 현재까지 push되지 않은 전체적인 기록이 남는 듯 하다. 내가 남긴 커밋 제목으로 해당 git Head 번호를 찾는다.
+  + 2. git checkout -b "new branch name" HEAD@{num} : 위에서 찾은 Head 번호를 num에 넣고, 새로 만들 branch이름을 new branch name에 넣어서 명령어를 입력한다
+  + 3. git log -p : 내가 날린 최종 커밋이 맞는지 확인한다.
+  + 4. 맞다면, 해당 브랜치로 github의 master branch에 push 하고, 새로 만든 branch 지우고, master branch에서 pull한다.
